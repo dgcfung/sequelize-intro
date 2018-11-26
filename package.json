@@ -1,0 +1,22 @@
+{
+  "name": "sequelize_query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resetDb": "node resetDb.js",
+    "seed": "node seed.js",
+    "debug": "node --inspect-brk main.js",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "jq": "^1.7.2",
+    "pg": "^7.6.1",
+    "sequelize": "^4.41.2"
+  }
+}

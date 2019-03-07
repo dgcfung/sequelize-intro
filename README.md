@@ -219,6 +219,25 @@ const records = await Record.findAll({
 });
 ```
 
+## Delete an instance
+
+```js
+const baldwin = await Author.findOne({
+  where: {
+    name: 'James Baldwin' 
+  }
+});
+
+baldwin.destroy();
+```
+
+## Update an instance
+
+```js
+baldwin.name = 'James Arthur Baldwin';
+await baldwin.save();
+```
+
 ### Codealong
 
 - Clone down this repo

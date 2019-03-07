@@ -1,4 +1,6 @@
-# Sequelize Intro
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  WEB DEVELOPMENT IMMERSIVE
+
+# Sequelize
 
 ### Learning Objectives
 
@@ -13,8 +15,6 @@ _Students should already be able to..._
 
 - Create, read, update and delete from a database using SQL. 
 - Use SQL syntax to define datatypes, perform joins and filtering.
-
-
 
 ## What's going on here?
 We will store our information in databases, and we've seen that we can query databases with SQL commands. But how can we access a database from within a JavaScript application?

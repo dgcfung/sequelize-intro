@@ -242,7 +242,7 @@ await baldwin.save();
 
 - Clone down this repo
 - run `npm install`
-- run `createdb people_db``
+- run `createdb people_db`
 - run `npm run resetDb` and `npm run seed`
 - open `main.js` in your editor and add relevant code either as functions that are called in the `main` function or directly in `main`
 

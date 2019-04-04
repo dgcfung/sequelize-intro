@@ -258,4 +258,4 @@ await baldwin.save();
 
 **Bonus:**
 
-Fetch everyone from the db, update _all_ of their `company` columns to `General Assembly` and make sure they are saved to the db.
+Fetch everyone from the db, update _all_ of their `company` columns to `General Assembly` and make sure they are saved to the db. There is a Sequelize method called `bulkCreate`...

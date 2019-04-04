@@ -246,7 +246,7 @@ await baldwin.save();
 - run `npm run resetDb` and `npm run seed`
 - open `main.js` in your editor and add relevant code either as functions that are called in the `main` function or directly in `main`
 
-Problems:
+**Problems:**
 
 - write a function that fetches all `people` from the db and returns the array
 - fetch all the `people` from the db, but only return their `name` and `company` using the `forEach()` array method

@@ -11,6 +11,15 @@ const fetchOne = async () => {
 fetchOne();
 
 
+
+
+
+
+
+
+
+
+
 // const fetchAll = async () => {
 //   const people = await Person.findAll();
 //   console.log(JSON.stringify(people, null, 2));
@@ -20,6 +29,15 @@ fetchOne();
 // fetchAll();
 
 
+
+
+
+
+
+
+
+
+
 // const fetchSpecific = async (id) => {
 //   const person = await Person.findByPk(id);
 //   console.log(JSON.stringify(person, null, 2));
@@ -27,6 +45,15 @@ fetchOne();
 // }
 
 // fetchSpecific(1);
+
+
+
+
+
+
+
+
+
 
 
 // const fetchLowIds = async (max) => {
@@ -46,6 +73,12 @@ fetchOne();
 
 
 
+
+
+
+
+
+
 // const fetchOnlyNames = async () => {
 //   const names = await Person.findAll({
 //     attributes: ['name']
@@ -56,6 +89,12 @@ fetchOne();
 // };
 
 // fetchOnlyNames();
+
+
+
+
+
+
 
 
 
@@ -73,6 +112,15 @@ fetchOne();
 // };
 
 // create('Joe Bogus', 'GA', 'Director', 'Instruction');
+
+
+
+
+
+
+
+
+
 
 
 // const findPerson = async (personName) => {
@@ -97,6 +145,12 @@ fetchOne();
 // }
 
 // updateJoe();
+
+
+
+
+
+
 
 
 

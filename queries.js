@@ -4,58 +4,119 @@ const { Person } = require('./models');
 
 const fetchOne = async () => {
   const person = await Person.findOne();
-  return person;
+  console.log(person)
+  // console.log(JSON.stringify(person))
 }
 
-const fetchAll = async () => {
-  const people = await Person.findAll();
-  return people;
-}
+fetchOne();
 
-const fetchSpecific = async (id) => {
-  const person = await Person.findById(id);
 
-  return person;
-}
+// const fetchAll = async () => {
+//   const people = await Person.findAll();
+//   console.log(JSON.stringify(people, null, 2));
+//   process.exit();
+// }
 
-const fetchLowIds = async (max) => {
-  const people = await Person.findAll({
-    where: {
-      id: {
-        [Op.lt]: max
-      }
-    }
-  });
+// fetchAll();
 
-  return people;
-}
 
-const fetchOnlyNames = async () => {
-  const names = await Person.findAll({
-    attributes: ['name']
-  });
+// const fetchSpecific = async (id) => {
+//   const person = await Person.findByPk(id);
+//   console.log(JSON.stringify(person, null, 2));
+//   process.exit();
+// }
 
-  return names;
-};
+// fetchSpecific(1);
 
-const create = async (name, company, role, sector) => {
-  const person = await Person.create({
-    name,
-    company,
-    role,
-    sector
-  });
 
-  return person;
-};
+// const fetchLowIds = async (max) => {
+//   const people = await Person.findAll({
+//     where: {
+//       id: {
+//         [Op.lt]: max
+//       }
+//     }
+//   });
 
-const updateName = async(person, name) => {
-  person.name = name;
-  await person.save();
-  return person;
-};
+//   console.log(JSON.stringify(people, null, 2));
+//   process.exit();
+// }
 
-const deletePerson = async (person) => {
-  return await person.destroy();
-};
+// fetchLowIds(8);
 
+
+
+// const fetchOnlyNames = async () => {
+//   const names = await Person.findAll({
+//     attributes: ['name']
+//   });
+
+//   console.log(JSON.stringify(names, null, 2));
+//   process.exit();
+// };
+
+// fetchOnlyNames();
+
+
+
+
+// const create = async (name, company, role, sector) => {
+//   const person = await Person.create({
+//     name,
+//     company,
+//     role,
+//     sector
+//   });
+
+//   console.log(JSON.stringify(person, null, 2));
+//   process.exit();
+// };
+
+// create('Joe Bogus', 'GA', 'Director', 'Instruction');
+
+
+// const findPerson = async (personName) => {
+//   const person = await Person.findOne({
+//     where: {
+//       name: personName
+//     }
+//   })
+//   return person;
+// }
+
+// const updateName = async(person, name) => {
+//   person.name = name;
+//   await person.save();
+//   console.log(JSON.stringify(person, null, 2));
+//   process.exit();
+// };
+
+// const updateJoe = async () => {
+//   const joe = await findPerson('Joe Schmoe')
+//   await updateName(joe, 'Joe Shmoe');
+// }
+
+// updateJoe();
+
+
+
+// const deletePerson = async (person) => {
+//   await person.destroy();
+//   console.log('Deleted:');
+//   console.log(JSON.stringify(person, null, 2));
+// };
+
+// const deleteJoe = async () => {
+//   const joe = await findPerson('Joe Shmoe')
+//   await deletePerson(joe);
+//   process.exit();
+// }
+
+// deleteJoe();
+
+// const findJoeByPk = async () => {
+//   const person = await Person.findByPk(31)
+//   console.log(JSON.stringify(person, null, 2));
+// }
+
+// findJoeByPk()

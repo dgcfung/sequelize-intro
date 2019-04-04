@@ -249,13 +249,13 @@ await baldwin.save();
 Problems:
 
 - write a function that fetches all `people` from the db and returns the array
-- fetch all the `people` from the db, but only return their `name` and `company`
+- fetch all the `people` from the db, but only return their `name` and `company` using the `forEach()` array method
 - fetch only people who have id's greater than 10
 - Create two new people and make sure they are saved to the db.  How might you verify this both in psql and using sequelize?
 - Fetch one of the people you just created and update/save their role
 - Fetch another person you did not create adn update their name to your own
 - Create yet another person, verify that they are in the db, then fetch and destroy that person
 
-Bonus:
+**Bonus:**
 
 Fetch everyone from the db, update _all_ of their `company` columns to `General Assembly` and make sure they are saved to the db.

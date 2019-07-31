@@ -6,14 +6,14 @@
 
  - Describe what an ORM is and why we would use one
  - Model a database using an ORM
- - Create a Sequelize model of a database table 
+ - Create a Sequelize model of a database table
  - Insert data with model methods
  - Target a specific record in a database using Sequelize model methods and operators
 
 ### Prior to this Lesson
 _Students should already be able to..._
 
-- Create, read, update and delete from a database using SQL. 
+- Create, read, update and delete from a database using SQL.
 - Use SQL syntax to define datatypes, perform joins and filtering.
 
 ## What's going on here?
@@ -22,7 +22,7 @@ We will store our information in databases, and we've seen that we can query dat
 An **Object Relational Mapping**, or **ORM**, bridges this gap for us. An ORM library like Sequelize offers an easy way to communicate with a database with familiar JavaScript syntax.
 
  [From the venerable wikipedia](https://en.wikipedia.org/wiki/Object-relational_mapping#Comparison_with_traditional_data_access_techniques)
- 
+
 > Compared to traditional techniques of exchange between an object-oriented language and a relational database, ORM often reduces the amount of code that needs to be written.[2]
 
 > Disadvantages of ORM tools generally stem from the high level of abstraction obscuring what is actually happening in the implementation code. Also, heavy reliance on ORM software has been cited as a major factor in producing poorly designed databases.
@@ -31,7 +31,7 @@ The core motivation for developing and using an ORM framework is the need to ove
 
 > The object-relational impedance mismatch is a set of conceptual and technical difficulties that are often encountered when a relational database management system (RDBMS) is being served by an application program (or multiple application programs) written in an object-oriented programming language or style, particularly because objects or class definitions must be mapped to database tables defined by a relational schema.
 
-In short, we want to be able to interact with a SQL database using an Object-Oriented programming paradigm, and an ORM framework provides a set of absrtactions and methods that allow developers to write code in this fashion.  
+In short, we want to be able to interact with a SQL database using an Object-Oriented programming paradigm, and an ORM framework provides a set of absrtactions and methods that allow developers to write code in this fashion.
 
 An additional touted benefit is that ORM frameworks isolate developers from the inner quirks of particular database implementations, but in practice this is often a secondary concern at most.  Generally, the ability to compose snippets of code and queries into more general operations and the seamless integration of information from the database into the native programming language structures are what justify the "magic" inherent in an ORM framework.
 
@@ -199,7 +199,7 @@ const names = await Person.findAll({
 
 There are many more operators such as `[Op.like]` and `[Op.in]`. Read [the Sequelize Operators documentation for examples](http://docs.sequelizejs.com/manual/tutorial/querying.html#operators).
 
-### Ordering 
+### Ordering
 
 ```js
 const records = await Record.findAll({
@@ -224,7 +224,7 @@ const records = await Record.findAll({
 ```js
 const baldwin = await Author.findOne({
   where: {
-    name: 'James Baldwin' 
+    name: 'James Baldwin'
   }
 });
 
@@ -253,7 +253,7 @@ await baldwin.save();
 - fetch only people who have id's greater than 10
 - Create two new people and make sure they are saved to the db.  How might you verify this both in psql and using sequelize?
 - Fetch one of the people you just created and update/save their role
-- Fetch another person you did not create adn update their name to your own
+- Fetch another person you did not create and update their name to your own
 - Create yet another person, verify that they are in the db, then fetch and destroy that person
 
 **Bonus:**

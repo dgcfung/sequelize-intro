@@ -149,6 +149,7 @@ const records = await Record.findAll({
 });
 ```
 
+
 ### AND and OR clauses
 
 Special SQL operators are exposed through Sequelize using special keys on the `Op` object.  Note the `[Op.or]` bracket syntax for passing special op keys to the options object.
@@ -184,6 +185,25 @@ const records = await Record.findAll({
   },
 });
 ```
+There are many more operators such as `[Op.like]` and `[Op.in]`. Read [the Sequelize Operators documentation for examples](http://docs.sequelizejs.com/manual/tutorial/querying.html#operators).
+
+### Greater than and less than
+Sometimes in a where clause, we want to know all of the values *greater than* or *less than* a specific value. For this, we can use `Op.gt` and `Op.lt`. 
+
+```js
+// Sequelize stores these operators on the `Sequelize.Op` module:
+const Op = Sequelize.Op
+
+const youngFolks = Person.findAll({
+  where: {
+    age: {
+      [Op.lt]: 30 // square brackets are needed for property names that aren't plain strings
+    }
+  }
+})
+```
+
+There are many more operators like this, [check 'em out here](https://sequelize-guides.netlify.com/search-operators/).
 
 ### Particular attributes
 
@@ -193,7 +213,7 @@ const names = await Person.findAll({
   });
 ```
 
-There are many more operators such as `[Op.like]` and `[Op.in]`. Read [the Sequelize Operators documentation for examples](http://docs.sequelizejs.com/manual/tutorial/querying.html#operators).
+
 
 ### Ordering
 

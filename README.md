@@ -5,9 +5,6 @@
 ### Learning Objectives
 
  - Describe what an ORM is and why we would use one
- - Model a database using an ORM
- - Create a Sequelize model of a database table
- - Insert data with model methods
  - Target a specific record in a database using Sequelize model methods and operators
 
 ### Prior to this Lesson
@@ -17,23 +14,22 @@ _Students should already be able to..._
 - Use SQL syntax to define datatypes, perform joins and filtering.
 
 ## What's going on here?
-We will store our information in databases, and we've seen that we can query databases with SQL commands. But how can we access a database from within a JavaScript application?
+When we talk about the "back end" of a web application, we're actually talking about a few things. For now, let's talk about two of those:
+- The server
+- The database
+
+Node.js —— specifically Express, which is a Node.js framework —— allows us to build server-side applications in Javascript. And that server-side application will talk to a database.
+
+![](https://t2conline.com/wp-content/uploads/2019/10/1.jpg)
+
+We will store our information in databases, and we've seen that we can query databases with SQL commands. But how can we access a database from within a JavaScript server-side application?
 
 An **Object Relational Mapping**, or **ORM**, bridges this gap for us. An ORM library like Sequelize offers an easy way to communicate with a database with familiar JavaScript syntax.
 
- [From the venerable wikipedia](https://en.wikipedia.org/wiki/Object-relational_mapping#Comparison_with_traditional_data_access_techniques)
+![](https://image.slidesharecdn.com/learnbackendjavascript-171207142219/95/learn-backend-java-script-9-638.jpg?cb=1512657034)
 
-> Compared to traditional techniques of exchange between an object-oriented language and a relational database, ORM often reduces the amount of code that needs to be written.[2]
+In short, we want to be able to interact with a SQL database using an Object-Oriented programming paradigm, and an ORM framework provides a set of methods that allow developers to write code in this fashion.
 
-> Disadvantages of ORM tools generally stem from the high level of abstraction obscuring what is actually happening in the implementation code. Also, heavy reliance on ORM software has been cited as a major factor in producing poorly designed databases.
-
-The core motivation for developing and using an ORM framework is the need to overcome the [impedance mismatch problem](https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch)
-
-> The object-relational impedance mismatch is a set of conceptual and technical difficulties that are often encountered when a relational database management system (RDBMS) is being served by an application program (or multiple application programs) written in an object-oriented programming language or style, particularly because objects or class definitions must be mapped to database tables defined by a relational schema.
-
-In short, we want to be able to interact with a SQL database using an Object-Oriented programming paradigm, and an ORM framework provides a set of absrtactions and methods that allow developers to write code in this fashion.
-
-An additional touted benefit is that ORM frameworks isolate developers from the inner quirks of particular database implementations, but in practice this is often a secondary concern at most.  Generally, the ability to compose snippets of code and queries into more general operations and the seamless integration of information from the database into the native programming language structures are what justify the "magic" inherent in an ORM framework.
 
 ## Basic Concepts and Queries
 
